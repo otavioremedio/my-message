@@ -1,0 +1,50 @@
+//ambiente
+
+install node
+install mongo
+install brackets
+    extesions rating
+    file tree exclude
+    brackets git
+install yo (npm install -g yo)
+install bower, gulp-angular (npm install -g gulp bower generator-gulp-angular)
+
+
+//pra rodar tudo
+um cmd para gulp
+um cmd para node
+um cmd para mongo listener
+um cmd para mongo shell
+
+///mongo
+rodar "mongod" já com a pasta data\db criada
+comando "mongo" conecta
+
+//gulp
+para criar projeto "yo gulp-angular nome projeto"
+depois acionar o comando "gulp"
+depois acionar o comando "gulp serve"
+
+//comando para criar o back-end
+npm init
+npm install express -save
+
+//node
+comando para rodar 
+node server.js
+
+
+//para testar node
+addon postman
+http://localhost:5000/api/message
+selecionar body, raw e json
+
+//instalar body-parser na pasta de back
+npm install body-parser -save
+
+
+//instalar mongo na pasta de back
+npm install mongodb
+
+//instalar mongoose
+npm install mongoose -save
