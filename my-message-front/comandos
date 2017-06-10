@@ -6,8 +6,8 @@ install brackets
     extesions rating
     file tree exclude
     brackets git
-install yo (npm install -g yo)
-install bower, gulp-angular (npm install -g gulp bower generator-gulp-angular)
+install yo (npm install -g yo) cmd geral
+install bower, gulp-angular (npm install -g gulp bower generator-gulp-angular) cmd geral
 
 
 //pra rodar tudo
@@ -30,7 +30,7 @@ npm init
 npm install express -save
 
 //node
-comando para rodar 
+comando para rodar
 node server.js
 
 
