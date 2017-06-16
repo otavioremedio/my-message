@@ -52,3 +52,6 @@ npm install mongoose -save
 //instalar satellizer para autenticação backend
 bower install satellizer
 
+//instalar no backend
+npm install jwt-simple --save
+npm install moment --save

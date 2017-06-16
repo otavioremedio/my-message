@@ -13,5 +13,10 @@
     "angular": true,
     "module": true,
     "inject": true
+  },
+  "rules":{
+    "angular/log": 1,
+    "angular/window-service": 1,
+    "no-console":0
   }
 }

@@ -5,11 +5,11 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 var database;
-//maiusculo pq instancia
-var Message = mongoose.model('Message',{
-    msg: String
-});
+var auth = require('./controllers/auth');
+var message = require('./controllers/message');
 
+
+//maiusculo pq instancia
 app.use(bodyParser.json());
 
 app.use(function(req,res,next){
@@ -18,15 +18,11 @@ app.use(function(req,res,next){
     next();
 })
 
-app.get('/api/message', GetMessages); //ok
+app.get('/api/message', message.get); //ok
 
-app.post('/api/message', function(req, res){
-    console.log(req.body);
-    //database.collection('messages').insertOne(req.body);
-    var message = new Message(req.body);
-    message.save();
-    res.status(200); //ok
-})
+app.post('/api/message', message.post);
+
+app.post('/auth/register', auth.register);
 
 /*mongo.connect("mongodb://localhost:27017/test", function(err,db){
     if(!err){
@@ -44,12 +40,6 @@ mongoose.connect("mongodb://localhost:27017/test", function(err,db){
         //db.collection('messages').insertOne({'msg':'test'});
     }
 })
-
-function GetMessages(req, res){
-    Message.find({}).exec(function(err, result){
-        res.send(result);
-    })
-}
 
 var server = app.listen(5000, function(){
     console.log('listening on port ', server.address().port);
