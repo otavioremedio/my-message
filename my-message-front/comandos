@@ -48,3 +48,7 @@ npm install mongodb
 
 //instalar mongoose
 npm install mongoose -save
+
+//instalar satellizer para autenticação backend
+bower install satellizer
+
