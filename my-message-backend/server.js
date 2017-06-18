@@ -18,10 +18,9 @@ app.use(cors);
 
 //request
 app.get('/api/message', message.get); //ok
-
 app.post('/api/message', checkAuthenticated, message.post);
-
 app.post('/auth/register', auth.register);
+app.post('/auth/login', auth.login);
 
 /*mongo.connect("mongodb://localhost:27017/test", function(err,db){
     if(!err){
